@@ -1,7 +1,13 @@
-C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.csprojAssemblyReference.cache
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.csproj.CoreCompileInputs.cache
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.dll.config
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.dll
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.pdb
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.dll
 C:\Users\Harshit\source\repos\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.dll.config
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.dll
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\bin\Debug\Image Steganography Service.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.csprojAssemblyReference.cache
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.csproj.CoreCompileInputs.cache
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.dll
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Service\Image Steganography Service\obj\Debug\Image Steganography Service.pdb

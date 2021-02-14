@@ -13,9 +13,9 @@ namespace Image_Steganography_Service
     public interface IHideAndSeek
     {
         [OperationContract]
-        String hideMessage(String msg, String key, String cover, String encryptType);
+        byte[] hideMessage(String msg, String key, byte[] cover, String encryptType);
 
         [OperationContract]
-        String seekMessage(String key, String coverWithData, String encryptType);
+        String seekMessage(String key, byte[] coverWithData, String encryptType);
     }
 }

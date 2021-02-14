@@ -42,7 +42,9 @@
     <div class="container">
             <asp:TextBox ID="message" runat="server"></asp:TextBox>
             <asp:FileUpload ID="file" runat="server"/>
-            <asp:Button runat="server" OnClick="Unnamed1_Click" />
+            <asp:Button runat="server" OnClick="Unnamed1_Click" Text="Encode" />
+            <asp:Button runat="server" OnClick="decode_Click" />
+            <asp:Image ID="show" runat="server"/>
     </div>
 
             

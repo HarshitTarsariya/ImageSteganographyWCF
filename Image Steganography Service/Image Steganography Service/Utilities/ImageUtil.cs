@@ -18,7 +18,7 @@ namespace Image_Steganography_Service.Utilities
         }
 
 
-        public String hideMessage(string msg, string mykey, Image image, CryptoUtil.Algo algo)
+        public byte[] hideMessage(string msg, string mykey, byte[] image, CryptoUtil.Algo algo)
         {
             //if (msg == null || msg == "")
             //    return false;
@@ -35,7 +35,7 @@ namespace Image_Steganography_Service.Utilities
                     break;
             }
 
-            using (var img = new Bitmap(image))
+            using (var img = new Bitmap(new MemoryStream(image)))
             {
                 var maxbytes = (img.Width * img.Height * 3) / 8 - 5;
                 //if (cipher.Length > maxbytes)
@@ -74,12 +74,13 @@ namespace Image_Steganography_Service.Utilities
                 img.SetPixel(img.Width - 1, img.Height - 2,
                     Color.FromArgb(0, 0, (byte)(cipher.Length >> 24)));
                 #endregion
+
+
                 MemoryStream ms = new MemoryStream();
                 img.Save(ms, ImageFormat.Png);
                 byte[] bmpBytes = ms.ToArray();
-                return Convert.ToBase64String(bmpBytes);
-                //return (Image)img;
-                //img.Save(dest_path, ImageFormat.Png);
+                return bmpBytes;
+
                 #if DEBUGMODE
                 Console.WriteLine("cipher [{1}]: [{0}]", String.Join(",", cipher), cipher.Length);
                 printBinArr(binryArr);
@@ -107,12 +108,12 @@ namespace Image_Steganography_Service.Utilities
             Console.WriteLine();
         }
 
-        public string extractMessage(Image image, string mykey, CryptoUtil.Algo algo)
+        public string extractMessage(byte[] image, string mykey, CryptoUtil.Algo algo)
         {
             string msg = "";
             byte[] key, iv;
             (key, iv) = crypto.GetKeyIv(algo, mykey);
-            using (var img = new Bitmap(image))
+            using (var img = new Bitmap(new MemoryStream(image)))
             {
                 Color last1 = img.GetPixel(img.Width - 1, img.Height - 1),
                     last2 = img.GetPixel(img.Width - 1, img.Height - 2);

@@ -16,16 +16,16 @@ namespace Image_Steganography.Steganography {
     public interface IHideAndSeek {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHideAndSeek/hideMessage", ReplyAction="http://tempuri.org/IHideAndSeek/hideMessageResponse")]
-        string hideMessage(string msg, string key, string cover, string encryptType);
+        byte[] hideMessage(string msg, string key, byte[] cover, string encryptType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHideAndSeek/hideMessage", ReplyAction="http://tempuri.org/IHideAndSeek/hideMessageResponse")]
-        System.Threading.Tasks.Task<string> hideMessageAsync(string msg, string key, string cover, string encryptType);
+        System.Threading.Tasks.Task<byte[]> hideMessageAsync(string msg, string key, byte[] cover, string encryptType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHideAndSeek/seekMessage", ReplyAction="http://tempuri.org/IHideAndSeek/seekMessageResponse")]
-        string seekMessage(string key, string coverWithData, string encryptType);
+        string seekMessage(string key, byte[] coverWithData, string encryptType);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IHideAndSeek/seekMessage", ReplyAction="http://tempuri.org/IHideAndSeek/seekMessageResponse")]
-        System.Threading.Tasks.Task<string> seekMessageAsync(string key, string coverWithData, string encryptType);
+        System.Threading.Tasks.Task<string> seekMessageAsync(string key, byte[] coverWithData, string encryptType);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,19 +55,19 @@ namespace Image_Steganography.Steganography {
                 base(binding, remoteAddress) {
         }
         
-        public string hideMessage(string msg, string key, string cover, string encryptType) {
+        public byte[] hideMessage(string msg, string key, byte[] cover, string encryptType) {
             return base.Channel.hideMessage(msg, key, cover, encryptType);
         }
         
-        public System.Threading.Tasks.Task<string> hideMessageAsync(string msg, string key, string cover, string encryptType) {
+        public System.Threading.Tasks.Task<byte[]> hideMessageAsync(string msg, string key, byte[] cover, string encryptType) {
             return base.Channel.hideMessageAsync(msg, key, cover, encryptType);
         }
         
-        public string seekMessage(string key, string coverWithData, string encryptType) {
+        public string seekMessage(string key, byte[] coverWithData, string encryptType) {
             return base.Channel.seekMessage(key, coverWithData, encryptType);
         }
         
-        public System.Threading.Tasks.Task<string> seekMessageAsync(string key, string coverWithData, string encryptType) {
+        public System.Threading.Tasks.Task<string> seekMessageAsync(string key, byte[] coverWithData, string encryptType) {
             return base.Channel.seekMessageAsync(key, coverWithData, encryptType);
         }
     }

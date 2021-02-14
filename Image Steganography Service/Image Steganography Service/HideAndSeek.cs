@@ -19,16 +19,18 @@ namespace Image_Steganography_Service
         {
             util = new ImageUtil();
         }
-        public String hideMessage(string msg, string key, String cover, string encryptType)
+        public byte[] hideMessage(string msg, string key, byte[] cover, string encryptType)
         {
-            var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(cover)));
-            return util.hideMessage(msg, key, img, (encryptType == "DES") ? CryptoUtil.Algo.DES : CryptoUtil.Algo.AES);
+            Console.WriteLine("Image reached when encoding size in bytes:"+cover.Length.ToString());
+            return util.hideMessage(msg, key, cover, (encryptType.Equals("DES"))? CryptoUtil.Algo.DES:CryptoUtil.Algo.AES );
+            
         }
 
-        public string seekMessage(string key, String coverWithData, string encryptType)
+        public string seekMessage(string key, byte[] coverWithData, string encryptType)
         {
-            var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(coverWithData)));
-            return util.extractMessage(img, key, (encryptType == "DES") ? CryptoUtil.Algo.DES : CryptoUtil.Algo.AES);
+            Console.WriteLine("Image reached when decoding size in bytes:" + coverWithData.Length.ToString());
+
+            return util.extractMessage(coverWithData, key, (encryptType.Equals("DES")) ? CryptoUtil.Algo.DES : CryptoUtil.Algo.AES);
             
         }
     }

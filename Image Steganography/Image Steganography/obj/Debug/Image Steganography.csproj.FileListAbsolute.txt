@@ -141,8 +141,8 @@ C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Imag
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\bin\Antlr3.Runtime.pdb
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.csprojAssemblyReference.cache
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.csproj.CoreCompileInputs.cache
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.csproj.CopyComplete
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.dll
 C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography\Image Steganography\obj\Debug\Image Steganography.csprojAssemblyReference.cache
