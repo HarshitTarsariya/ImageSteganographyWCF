@@ -8,3 +8,13 @@ C:\Users\Harshit\source\repos\Image Steganography Host\Image Steganography Host\
 C:\Users\Harshit\source\repos\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.csproj.CopyComplete
 C:\Users\Harshit\source\repos\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.exe
 C:\Users\Harshit\source\repos\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\bin\Debug\Image Steganography Host.exe.config
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\bin\Debug\Image Steganography Host.exe
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\bin\Debug\Image Steganography Host.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\bin\Debug\Image Steganography Service.dll
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\bin\Debug\Image Steganography Service.pdb
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.csprojAssemblyReference.cache
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.csproj.CoreCompileInputs.cache
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.csproj.CopyComplete
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.exe
+C:\Users\Harshit\source\repos\WCF\ImageSteganographyWCF\Image Steganography Host\Image Steganography Host\obj\Debug\Image Steganography Host.pdb
