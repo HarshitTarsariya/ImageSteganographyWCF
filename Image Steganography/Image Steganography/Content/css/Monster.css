@@ -1,0 +1,217 @@
+﻿.ufo {
+    font-size: 25vmin;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.monster {
+    font-size: 0.7em;
+    margin: 0 auto;
+    width: 1em;
+    height: 1.3em;
+    border-radius: 0.5em 0.5em 0em 0em / 0.6em 0.6em 0em 0em;
+    box-sizing: content-box;
+    border: 0.07em solid transparent;
+    position: relative;
+    user-select: none;
+    cursor: grab;
+}
+
+.monster.small {
+    font-size: 4rem;
+}
+
+.eyes, .eye-lid {
+    text-align: center;
+    display: flex;
+    font-size: 0.65em;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    left: 0.25em;
+    top: 0.3em;
+}
+
+.eye {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    width: 75%;
+    height: 75%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.eye-lid {
+    background-color: white;
+    border-radius: 0.5em 0.5em 0.5em 0.5em / 0.6em 0.6em 0.4em 0.4em;
+    box-shadow: 0.03em 0.14em rgba(0,0,0,0.1);
+    animation: blink forwards infinite 10s ease-in-out;
+}
+
+.eye:after { /*white shadow*/
+    --pupil-size: 0.2em;
+    position: absolute;
+    top: 0.05em;
+    left: 0.3em;
+    width: var(--pupil-size);
+    height: var(--pupil-size);
+    background: white;
+    border-radius: 50%;
+    content: " ";
+}
+
+.mouth {
+    font-size: 0.2em;
+    width: 1em;
+    height: 0.3em;
+    background: black;
+    border-radius: 1.5em 1.5em 0.5em 0.5em;
+    position: absolute;
+    bottom: 0.8em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouth::before {
+    width: 50%;
+    height: 30%;
+    display: block;
+    content: ' ';
+    background-color: #ff8800;
+    border-radius: 50% / 100% 100% 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-10%) translateX(-50%);
+}
+
+.vampi-mouth {
+    position: absolute;
+    background: black;
+    overflow: hidden;
+    font-size: 0.3em;
+    width: 1em;
+    height: 0.7em;
+    left: 50%;
+    bottom: 0.3em;
+    transform: translateX(-50%);
+    border-radius: 0.7em 0.7em 1.2em 1.2em;
+}
+
+.vampi-mouth::before {
+    content: '';
+    display: block;
+    background: #ff8800;
+    width: 100%;
+    height: 0.2em;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.vampi-tooth::before,
+.vampi-tooth::after,
+.vampi-tooth {
+    --teeth-size: 0.25em;
+    display: block;
+    width: 0;
+    height: 0;
+    font-size: inherit;
+    border-left: calc(var(--teeth-size) / 2) solid transparent;
+    border-right: calc(var(--teeth-size) / 2) solid transparent;
+    border-top: var(--teeth-size) solid #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vampi-tooth:before {
+    content: '';
+    transform: translateX(-150%) translateY(-100%);
+}
+
+.vampi-tooth:after {
+    content: '';
+    transform: translateX(50%) translateY(-100%);
+}
+
+.ear {
+    position: absolute;
+    top: -1.2em;
+    transform-origin: bottom center;
+    font-size: 0.3em;
+    width: .8em;
+    height: 1.5em;
+    left: 18%;
+    transform: rotate(-10deg);
+    animation: antena_e 5s infinite;
+}
+
+.ear + .ear {
+    left: auto;
+    right: 18%;
+    transform: rotate(10deg);
+    animation: antena_d 5s infinite;
+}
+
+.ear:before {
+    content: '';
+    display: block;
+    width: .8em;
+    height: .8em;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: inset -.1em -.08em rgba(0,0,0,.1);
+}
+
+.ear:after {
+    content: '';
+    display: block;
+    width: 0.3em;
+    height: 100%;
+    position: absolute;
+    top: .2em;
+    left: .3em;
+    background: currentColor;
+}
+
+@keyframes blink {
+    0%, 2%, 60%, 62%, 100% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    1%, 61% {
+        transform: scaleX(1.3) scaleY(0.1);
+    }
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(4%);
+    }
+}
+
+@keyframes bouncebody {
+    to {
+        transform: scaleX(1.03) scaleY(0.97);
+    }
+}
+
+@keyframes antena_d {
+    50% {
+        transform: rotate(20deg);
+    }
+}
+
+@keyframes antena_e {
+    50% {
+        transform: rotate(-20deg);
+    }
+}
