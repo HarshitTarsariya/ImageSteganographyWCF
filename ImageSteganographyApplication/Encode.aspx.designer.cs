@@ -24,13 +24,13 @@ namespace ImageSteganographyApplication
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// file control.
+        /// image_upload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload file;
+        protected global::System.Web.UI.HtmlControls.HtmlInputFile image_upload;
 
         /// <summary>
         /// message control.
@@ -40,6 +40,15 @@ namespace ImageSteganographyApplication
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox message;
+
+        /// <summary>
+        /// encrypt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList encrypt;
 
         /// <summary>
         /// key control.

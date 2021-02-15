@@ -127,7 +127,6 @@
     <Content Include="Content\Static\encode.png" />
     <Content Include="Content\Static\steganography.jpg" />
     <Content Include="Decode.aspx" />
-    <Content Include="Default.aspx" />
     <Content Include="DownloadImage.aspx" />
     <Content Include="Encode.aspx" />
     <Content Include="favicon.ico" />
@@ -142,6 +141,8 @@
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\FileSaver.js" />
+    <Content Include="Scripts\FileSaver.min.js" />
     <Content Include="Scripts\index.js.flow" />
     <Content Include="Scripts\esm\popper.min.js.map" />
     <Content Include="Scripts\esm\popper.js.map" />
@@ -164,6 +165,7 @@
     <None Include="Connected Services\Steganography\item1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="libman.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -285,13 +287,6 @@
     </Compile>
     <Compile Include="Decode.aspx.designer.cs">
       <DependentUpon>Decode.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="DownloadImage.aspx.cs">
       <DependentUpon>DownloadImage.aspx</DependentUpon>

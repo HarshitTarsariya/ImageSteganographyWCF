@@ -1,3 +1,5 @@
+
+
 function loadSelectedImage() {
     var file = document.getElementById('image_upload').files[0];
     var reader = new FileReader();
@@ -8,3 +10,4 @@ function loadSelectedImage() {
     }
     reader.readAsDataURL(file);
 }
+

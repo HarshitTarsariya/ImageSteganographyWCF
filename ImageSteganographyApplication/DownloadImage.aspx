@@ -6,7 +6,7 @@
             <div class="card-body text-center">
                 <div class="row">
                     <div class="col form-group">
-                        <img src="Content/Static/decode.png" alt="Default PNG Image" class="img-responsive imageThumbnail" />
+                        <img src="Content/Static/decode.png" id="preview" alt="Default PNG Image" class="img-responsive imageThumbnail" runat="server"/>
                     </div>
                 </div>                
                 <form id="form1" runat="server">
@@ -14,6 +14,7 @@
                         <div class="col form-group">
                             <asp:Button ID="BackToEncodePage" runat="server" Text="Back" CssClass="btn btn-dark mr-1" OnClick="BackToEncodePage_Click"></asp:Button>
                             <asp:Button ID="DownloadEncodedImage" runat="server" Text="Download" CssClass="btn btn-dark" OnClick="DownloadEncodedImage_Click"></asp:Button>
+                            <button type="submit" onclick="window.open('file.doc')">Download!</button>
                         </div>
                     </div>
                 </form>                

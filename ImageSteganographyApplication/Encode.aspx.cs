@@ -9,24 +9,26 @@ namespace ImageSteganographyApplication
 {
     public partial class Encode : System.Web.UI.Page
     {
+        Steganography.HideAndSeekClient client;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            client = new Steganography.HideAndSeekClient();
         }
 
         protected void EncodeSubmitButton_Click(object sender, EventArgs e)
         {
-            Steganography.HideAndSeekClient client = new Steganography.HideAndSeekClient();
-
-            int imagefilelenth = file.PostedFile.ContentLength;
+            int imagefilelenth = image_upload.PostedFile.ContentLength;
             byte[] imgarray = new byte[imagefilelenth];
-            HttpPostedFile image = file.PostedFile;
+            HttpPostedFile image = image_upload.PostedFile;
             image.InputStream.Read(imgarray, 0, imagefilelenth);
 
+
             //Encoding Image
-            byte[] ret = client.hideMessage(message.Text,key.Text, imgarray, "AES");
+            byte[] ret = client.hideMessage(message.Text, key.Text, imgarray, encrypt.Text);
             System.Diagnostics.Debug.WriteLine(ret.Length);
-            //Response.Redirect("DownloadImage.aspx");
+
+            Session.Add("Image", ret);
+            Response.Redirect("DownloadImage.aspx");
         }
     }
 }

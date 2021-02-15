@@ -9,13 +9,21 @@ namespace ImageSteganographyApplication
 {
     public partial class Decode : System.Web.UI.Page
     {
+        Steganography.HideAndSeekClient client;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            client = new Steganography.HideAndSeekClient();
         }
         protected void DecodeSubmitButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Decode.aspx");
+            int imagefilelenth = image_upload.PostedFile.ContentLength;
+            byte[] imgarray = new byte[imagefilelenth];
+            HttpPostedFile image = image_upload.PostedFile;
+            image.InputStream.Read(imgarray, 0, imagefilelenth);
+
+            //Decoding Message
+            finalmessage.InnerText= client.seekMessage(key.Text, imgarray, encrypt.Text);
+
         }
     }
 }
