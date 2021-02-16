@@ -13,6 +13,7 @@ namespace ImageSteganographyApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             client = new Steganography.HideAndSeekClient();
+            error.Visible = false;
         }
         protected void DecodeSubmitButton_Click(object sender, EventArgs e)
         {
@@ -22,8 +23,16 @@ namespace ImageSteganographyApplication
             image.InputStream.Read(imgarray, 0, imagefilelenth);
 
             //Decoding Message
-            finalmessage.InnerText= client.seekMessage(key.Text, imgarray, encrypt.Text);
-
+            String msg;
+            msg= client.seekMessage(key.Text, imgarray, encrypt.Text);
+            if (msg.Equals(""))
+            {
+                error.Visible = true;
+            }
+            else
+            {
+                finalmessage.InnerText = msg;
+            }
         }
     }
 }

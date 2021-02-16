@@ -40,7 +40,7 @@
                         
                     <div class="col form-group">
                         <%--<asp:FileUpload class="form-control-file" ID="file" onchange="loadSelectedImage()"  runat="server"/>--%>
-                        <input id="image_upload" class="form-control-file"
+                        <input id="image_upload" class="form-control-file form-control"
                                 type="file" name="picture"
                             title="Upload PNG Image" runat="server"   onchange="loadSelectedImage()" ClientIDMode="Static" required="required"/>
                     </div>
@@ -59,7 +59,7 @@
                         <label class="font-weight-bold">Select Encrytion Type:</label>
                     </div>
                     <div class="col form-group">
-                        <asp:DropDownList ID="encrypt" runat="server" >
+                        <asp:DropDownList ID="encrypt" CssClass="form-control" runat="server" >
                             <asp:ListItem Text="AES"></asp:ListItem>
                             <asp:ListItem Text="DES"></asp:ListItem>
                         </asp:DropDownList>
@@ -81,6 +81,11 @@
                         <%-- Reset is done by the HTML tags --%>
                         <button type="reset" class="btn btn-dark mr-1">Reset</button>
                         <asp:Button ID="EncodeSubmitButton" runat="server" Text="Submit" CssClass="btn btn-dark" OnClick="EncodeSubmitButton_Click"></asp:Button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                       <asp:Label ID="error" runat="server" ForeColor="Red" CssClass="font-weight-bold" Visible="false" >Invalid Data Provided For Encoding</asp:Label>
                     </div>
                 </div>
             </div>

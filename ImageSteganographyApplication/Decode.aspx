@@ -38,9 +38,9 @@
                             <label class="font-weight-bold">Upload Picture (in PNG):</label>
                         </div>
                         <div class="col form-group">
-                            <input id="image_upload" class="form-control-file"
+                            <input id="image_upload" class="form-control"
                                 onchange="loadSelectedImage()" type="file" name="picture"
-                                title="Upload PNG Image" runat="server" ClientIDMode="Static"/>
+                                title="Upload PNG Image" runat="server" ClientIDMode="Static" required="required"/>
                         </div>
                     </div>
                     <div class="row">
@@ -48,7 +48,7 @@
                             <label class="font-weight-bold">Select Encrytion Type:</label>
                         </div>
                         <div class="col form-group">
-                            <asp:DropDownList ID="encrypt" runat="server" >
+                            <asp:DropDownList ID="encrypt" CssClass="form-control" runat="server" >
                                 <asp:ListItem Text="AES"></asp:ListItem>
                                 <asp:ListItem Text="DES"></asp:ListItem>
                             </asp:DropDownList>
@@ -71,6 +71,12 @@
                             <asp:Button ID="DecodeSubmitButton" runat="server" Text="Submit" CssClass="btn btn-dark" OnClick="DecodeSubmitButton_Click"></asp:Button>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <asp:Label ID="error" runat="server" ForeColor="Red" CssClass="font-weight-bold" Visible="false" >Invalid Data Provided For Decoding</asp:Label>
+                        </div>
+                    </div>
+
                     <%-- Display Output here --%>
                     <div class="row">
                         <div class="col form-group">

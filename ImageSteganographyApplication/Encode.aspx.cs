@@ -13,6 +13,7 @@ namespace ImageSteganographyApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             client = new Steganography.HideAndSeekClient();
+            error.Visible = false;
         }
 
         protected void EncodeSubmitButton_Click(object sender, EventArgs e)
@@ -25,10 +26,17 @@ namespace ImageSteganographyApplication
 
             //Encoding Image
             byte[] ret = client.hideMessage(message.Text, key.Text, imgarray, encrypt.Text);
-            System.Diagnostics.Debug.WriteLine(ret.Length);
+            if (ret == null)
+            {
+                error.Visible = true;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine(ret.Length);
 
-            Session.Add("Image", ret);
-            Response.Redirect("DownloadImage.aspx");
+                Session.Add("Image", ret);
+                Response.Redirect("DownloadImage.aspx");
+            }
         }
     }
 }

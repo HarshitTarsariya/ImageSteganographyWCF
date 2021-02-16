@@ -29,7 +29,6 @@ namespace Image_Steganography_Service
         public string seekMessage(string key, byte[] coverWithData, string encryptType)
         {
             Console.WriteLine("Image reached when decoding size in bytes:" + coverWithData.Length.ToString());
-
             return util.extractMessage(coverWithData, key, (encryptType.Equals("DES")) ? CryptoUtil.Algo.DES : CryptoUtil.Algo.AES);
             
         }

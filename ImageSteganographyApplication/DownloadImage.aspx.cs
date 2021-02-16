@@ -31,7 +31,6 @@ namespace ImageSteganographyApplication
 
         protected void DownloadEncodedImage_Click(object sender, EventArgs e)
         {
-            
             Response.Redirect("DownloadImage.aspx");
         }
     }

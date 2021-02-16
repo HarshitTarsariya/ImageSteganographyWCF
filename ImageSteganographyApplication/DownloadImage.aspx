@@ -14,7 +14,6 @@
                         <div class="col form-group">
                             <asp:Button ID="BackToEncodePage" runat="server" Text="Back" CssClass="btn btn-dark mr-1" OnClick="BackToEncodePage_Click"></asp:Button>
                             <asp:Button ID="DownloadEncodedImage" runat="server" Text="Download" CssClass="btn btn-dark" OnClick="DownloadEncodedImage_Click"></asp:Button>
-                            <button type="submit" onclick="window.open('file.doc')">Download!</button>
                         </div>
                     </div>
                 </form>                

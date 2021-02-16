@@ -20,8 +20,8 @@ namespace Image_Steganography_Service.Utilities
 
         public byte[] hideMessage(string msg, string mykey, byte[] image, CryptoUtil.Algo algo)
         {
-            //if (msg == null || msg == "")
-            //    return false;
+            if (msg == null || msg == "")
+                return null;
 
             byte[] key = null, iv = null, cipher = null;
             (key, iv) = crypto.GetKeyIv(algo, mykey);
@@ -38,8 +38,8 @@ namespace Image_Steganography_Service.Utilities
             using (var img = new Bitmap(new MemoryStream(image)))
             {
                 var maxbytes = (img.Width * img.Height * 3) / 8 - 5;
-                //if (cipher.Length > maxbytes)
-                //    return false;
+                if (cipher.Length > maxbytes)
+                    return null;
                 var binryArr = byteToBits(cipher);
                 int k = 0;
 
@@ -123,7 +123,7 @@ namespace Image_Steganography_Service.Utilities
                     new byte[] { last1.B, last1.G, last1.R, last2.B },
                     0);
                 var maxbytes = (img.Width * img.Height * 3) / 8 - 5;
-                if (msgSize > maxbytes || msgSize <= 0) return msg;
+                if (msgSize > maxbytes || msgSize <= 0) return "";
 
 
                 var binryArr = new bool[msgSize * 8];
