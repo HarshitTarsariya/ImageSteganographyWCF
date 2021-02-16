@@ -13,11 +13,21 @@
                     <div class="row">
                         <div class="col form-group">
                             <asp:Button ID="BackToEncodePage" runat="server" Text="Back" CssClass="btn btn-dark mr-1" OnClick="BackToEncodePage_Click"></asp:Button>
-                            <asp:Button ID="DownloadEncodedImage" runat="server" Text="Download" CssClass="btn btn-dark" OnClick="DownloadEncodedImage_Click"></asp:Button>
+                            <%--<asp:Button ID="DownloadEncodedImage" runat="server" Text="Download" CssClass="btn btn-dark" OnClick="DownloadEncodedImage_Click"></asp:Button>--%>
+                            <button type="button" onclick="downloadBase64File('image/png',<%="'"+ Str +"'"%>,'decode.png')" class="btn btn-dark">Download</button>
                         </div>
                     </div>
                 </form>                
             </div>
         </div>
-    </div>
+    </div>    
+    <script type="text/javascript">
+        function downloadBase64File(contentType, base64Data, fileName) {
+            const linkSource = `data:${contentType};base64,${base64Data}`;
+            const downloadLink = document.createElement("a");
+            downloadLink.href = linkSource;
+            downloadLink.download = fileName;
+            downloadLink.click();
+        }
+    </script>
 </asp:Content>
