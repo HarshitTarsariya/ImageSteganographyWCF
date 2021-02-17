@@ -14,6 +14,7 @@ namespace ImageSteganographyApplication
         {
             client = new Steganography.HideAndSeekClient();
             error.Visible = false;
+            finalmessage.InnerText = "";
         }
         protected void DecodeSubmitButton_Click(object sender, EventArgs e)
         {
