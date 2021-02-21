@@ -63,7 +63,7 @@
                             </div>
                             <div class="card-body bg-light">
                                 <h3>Harshit Tarsariya</h3>
-                                <a class="btn btn-dark" href="mailto:Harshittarsariya@gmail.com" role="button">Send Mail</a>
+                                <a class="btn btn-dark" href="mailto:harshittarsariya@gmail.com" role="button">Send Mail</a>
                             </div>
                         </div>
                     </div>
